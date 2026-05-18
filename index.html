@@ -1,160 +1,1019 @@
 <!DOCTYPE html>
 <html lang="ro">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Casa Linistii | Cazare in natura, Moldova</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = { theme: { extend: { colors: { forest:"#2D5016",leaf:"#5A8A2A",sage:"#8FAF6B",cream:"#FAF6EF",warm:"#F5EDD8",soil:"#3D2B1A",stone:"#8A7B6A",mist:"#E8F0DC" }, fontFamily: { serif:['"Playfair Display"','Georgia','serif'], sans:['Inter','system-ui','sans-serif'] } } } }
+    tailwind.config = { theme: { extend: { colors: { forest: "#2D5016", leaf: "#5A8A2A", sage: "#8FAF6B", cream: "#FAF6EF", warm: "#F5EDD8", soil: "#3D2B1A", stone: "#8A7B6A", mist: "#E8F0DC" }, fontFamily: { serif: ['"Playfair Display"', 'Georgia', 'serif'], sans: ['Inter', 'system-ui', 'sans-serif'] } } } }
   </script>
   <style>
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}html{scroll-behavior:smooth;}:root{--e:cubic-bezier(0.22,1,0.36,1);--es:cubic-bezier(0.34,1.4,0.64,1);}
-    body{background:#FAF6EF;color:#3D2B1A;font-family:'Inter',sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
-    #nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .5s var(--e),box-shadow .5s var(--e),padding .4s var(--e);padding:20px 0;}
-    #nav.sc{background:rgba(250,246,239,.95);backdrop-filter:blur(8px);box-shadow:0 1px 0 rgba(0,0,0,.07);padding:13px 0;}
-    #hero{position:relative;min-height:100vh;display:flex;align-items:center;}
-    #hbg{position:absolute;inset:0;z-index:0;background:url('CasutaLinistii/648103319_122110162623246531_1215205236711923298_n.jpg') center/cover no-repeat;}
-    #hbg::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,rgba(0,0,0,.62) 0%,rgba(0,0,0,.35) 60%,rgba(0,0,0,.15) 100%);}
-    .reveal{opacity:0;transform:translateY(20px);will-change:opacity,transform;transition:opacity .55s var(--e),transform .55s var(--e);}
-    .reveal-left{opacity:0;transform:translateX(-24px);will-change:opacity,transform;transition:opacity .55s var(--e),transform .55s var(--e);}
-    .reveal-right{opacity:0;transform:translateX(24px);will-change:opacity,transform;transition:opacity .55s var(--e),transform .55s var(--e);}
-    .reveal.in,.reveal-left.in,.reveal-right.in{opacity:1;transform:none;}
-    .btn-p{display:inline-block;background:#2D5016;color:#FAF6EF;font-family:'Inter',sans-serif;font-weight:500;font-size:13px;letter-spacing:.06em;padding:14px 32px;cursor:pointer;transition:background .35s var(--e),box-shadow .35s var(--e),transform .25s var(--es);}
-    .btn-p:hover{background:#3D6B1F;box-shadow:0 6px 24px rgba(45,80,22,.35);transform:translateY(-1px);}.btn-p:active{transform:scale(.98);}
-    .btn-ow{display:inline-block;border:1px solid rgba(255,255,255,.6);color:#fff;font-family:'Inter',sans-serif;font-weight:400;font-size:13px;letter-spacing:.06em;padding:13px 32px;cursor:pointer;transition:background .3s;}
-    .btn-ow:hover{background:rgba(255,255,255,.12);}
-    .rm{background:#fff;border:1px solid rgba(0,0,0,.07);overflow:hidden;transition:transform .4s var(--e),box-shadow .4s var(--e);position:relative;}
-    .rm:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.1);}
-    .rim{overflow:hidden;height:220px;}.rim img{width:100%;height:100%;object-fit:cover;will-change:transform;transition:transform .65s var(--e);}
-    .rm:hover .rim img{transform:scale(1.05);}
-    .rtag{font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;background:#E8F0DC;color:#2D5016;padding:4px 10px;border-radius:2px;display:inline-block;}
-    .rbar{background:#2D5016;color:#fff;font-family:'Inter',sans-serif;font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:13px;text-align:center;transform:translateY(100%);will-change:transform;transition:transform .42s var(--e);cursor:pointer;display:block;}
-    .rm:hover .rbar{transform:translateY(0);}
-    .ac{position:relative;overflow:hidden;cursor:pointer;}.ac img{width:100%;height:100%;object-fit:cover;will-change:transform;transition:transform .65s var(--e);}.ac:hover img{transform:scale(1.05);}
-    .ac .cap{position:absolute;bottom:0;left:0;right:0;padding:22px;background:linear-gradient(to top,rgba(0,0,0,.7) 0%,transparent 100%);}
-    .gi{position:relative;overflow:hidden;cursor:pointer;}.gi img{width:100%;height:100%;object-fit:cover;display:block;will-change:transform;transition:transform .65s var(--e);}.gi:hover img{transform:scale(1.05);}
-    .gi img,.rim img,.ac img{opacity:0;transition:opacity .5s ease;}.gi img.loaded,.rim img.loaded,.ac img.loaded{opacity:1;}.gi::after{content:'';position:absolute;inset:0;background:rgba(45,80,22,0);transition:background .4s var(--e);}.gi:hover::after{background:rgba(45,80,22,.18);}
-    .fqi{border-bottom:1px solid #E4D9C8;}.fqi summary{list-style:none;cursor:pointer;padding:18px 0;font-weight:500;font-size:14px;display:flex;justify-content:space-between;align-items:center;color:#3D2B1A;transition:color .2s;}.fqi summary:hover{color:#2D5016;}.fqi summary::-webkit-details-marker{display:none;}.fqi summary::after{content:'+';font-size:20px;color:#5A8A2A;}.fqi[open] summary::after{content:'-';}
-    .fqb{font-size:13px;color:#6B5A48;padding-bottom:18px;line-height:1.75;animation:fqin .35s var(--e);}@keyframes fqin{from{opacity:0;transform:translateY(-6px);}to{opacity:1;transform:none;}}
-    .fi2{width:100%;border:1px solid #D4C9B8;padding:12px 14px;font-family:'Inter',sans-serif;font-size:14px;color:#3D2B1A;background:#fff;outline:none;transition:border-color .2s,box-shadow .2s;}.fi2:focus{border-color:#5A8A2A;box-shadow:0 0 0 3px rgba(90,138,42,.12);}
-    .fl{display:block;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#8A7B6A;margin-bottom:6px;}
-    .slbl{font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#5A8A2A;}
-    .gline{height:1px;background:linear-gradient(90deg,transparent,#8FAF6B,transparent);}
-    .avb{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:8px 16px;backdrop-filter:blur(6px);}
-    .pdot{width:8px;height:8px;border-radius:50%;background:#4ade80;flex-shrink:0;animation:pd 2s infinite;}
-    @keyframes pd{0%,100%{box-shadow:0 0 0 0 rgba(74,222,128,.5);}50%{box-shadow:0 0 0 6px rgba(74,222,128,0);}}
-    .tsl{display:none;}.tsl.on{display:block;animation:tf .5s var(--e);}@keyframes tf{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:none;}}
-    .tdot{width:24px;height:2px;background:#D4C9B8;border:none;cursor:pointer;transition:background .3s,width .3s;}.tdot.on{background:#5A8A2A;width:36px;}
-    #stk{position:fixed;bottom:24px;right:24px;z-index:90;opacity:0;transform:translateY(20px) scale(.9);will-change:opacity,transform;transition:opacity .4s var(--e),transform .5s var(--es);pointer-events:none;}#stk.on{opacity:1;transform:none;pointer-events:auto;}
-    #stk a{display:flex;align-items:center;gap:8px;background:#2D5016;color:#fff;font-family:'Inter',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:13px 22px;box-shadow:0 6px 24px rgba(0,0,0,.25);transition:background .3s var(--e),transform .3s var(--es),box-shadow .3s var(--e);cursor:pointer;}#stk a:hover{background:#3D6B1F;transform:scale(1.04);box-shadow:0 8px 32px rgba(0,0,0,.3);}
-    section{contain:layout style;}#hero{contain:none;}
-    @media(prefers-reduced-motion:reduce){.reveal,.reveal-left,.reveal-right{transition:none;opacity:1;transform:none;}.pdot{animation:none;}}
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    :root {
+      --e: cubic-bezier(0.22, 1, 0.36, 1);
+      --es: cubic-bezier(0.34, 1.4, 0.64, 1);
+    }
+
+    body {
+      background: #FAF6EF;
+      color: #3D2B1A;
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    #nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      transition: background .5s var(--e), box-shadow .5s var(--e), padding .4s var(--e);
+      padding: 20px 0;
+    }
+
+    #nav.sc {
+      background: rgba(250, 246, 239, .95);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 1px 0 rgba(0, 0, 0, .07);
+      padding: 13px 0;
+    }
+
+    #hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+
+    #hbg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background: url('CasutaLinistii/648103319_122110162623246531_1215205236711923298_n.jpg') center/cover no-repeat;
+    }
+
+    #hbg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(0, 0, 0, .62) 0%, rgba(0, 0, 0, .35) 60%, rgba(0, 0, 0, .15) 100%);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      will-change: opacity, transform;
+      transition: opacity .55s var(--e), transform .55s var(--e);
+    }
+
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(-24px);
+      will-change: opacity, transform;
+      transition: opacity .55s var(--e), transform .55s var(--e);
+    }
+
+    .reveal-right {
+      opacity: 0;
+      transform: translateX(24px);
+      will-change: opacity, transform;
+      transition: opacity .55s var(--e), transform .55s var(--e);
+    }
+
+    .reveal.in,
+    .reveal-left.in,
+    .reveal-right.in {
+      opacity: 1;
+      transform: none;
+    }
+
+    .btn-p {
+      display: inline-block;
+      background: #2D5016;
+      color: #FAF6EF;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 13px;
+      letter-spacing: .06em;
+      padding: 14px 32px;
+      cursor: pointer;
+      transition: background .35s var(--e), box-shadow .35s var(--e), transform .25s var(--es);
+    }
+
+    .btn-p:hover {
+      background: #3D6B1F;
+      box-shadow: 0 6px 24px rgba(45, 80, 22, .35);
+      transform: translateY(-1px);
+    }
+
+    .btn-p:active {
+      transform: scale(.98);
+    }
+
+    .btn-ow {
+      display: inline-block;
+      border: 1px solid rgba(255, 255, 255, .6);
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 13px;
+      letter-spacing: .06em;
+      padding: 13px 32px;
+      cursor: pointer;
+      transition: background .3s;
+    }
+
+    .btn-ow:hover {
+      background: rgba(255, 255, 255, .12);
+    }
+
+    .rm {
+      background: #fff;
+      border: 1px solid rgba(0, 0, 0, .07);
+      overflow: hidden;
+      transition: transform .4s var(--e), box-shadow .4s var(--e);
+      position: relative;
+    }
+
+    .rm:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, .1);
+    }
+
+    .rim {
+      overflow: hidden;
+      height: 220px;
+    }
+
+    .rim img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      will-change: transform;
+      transition: transform .65s var(--e);
+    }
+
+    .rm:hover .rim img {
+      transform: scale(1.05);
+    }
+
+    .rtag {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      background: #E8F0DC;
+      color: #2D5016;
+      padding: 4px 10px;
+      border-radius: 2px;
+      display: inline-block;
+    }
+
+    .rbar {
+      background: #2D5016;
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      padding: 13px;
+      text-align: center;
+      transform: translateY(100%);
+      will-change: transform;
+      transition: transform .42s var(--e);
+      cursor: pointer;
+      display: block;
+    }
+
+    .rm:hover .rbar {
+      transform: translateY(0);
+    }
+
+    .ac {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .ac img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      will-change: transform;
+      transition: transform .65s var(--e);
+    }
+
+    .ac:hover img {
+      transform: scale(1.05);
+    }
+
+    .ac .cap {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 22px;
+      background: linear-gradient(to top, rgba(0, 0, 0, .7) 0%, transparent 100%);
+    }
+
+    .gi {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .gi img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      will-change: transform;
+      transition: transform .65s var(--e);
+    }
+
+    .gi:hover img {
+      transform: scale(1.05);
+    }
+
+    .gi img,
+    .rim img,
+    .ac img {
+      opacity: 0;
+      transition: opacity .5s ease;
+    }
+
+    .gi img.loaded,
+    .rim img.loaded,
+    .ac img.loaded {
+      opacity: 1;
+    }
+
+    .gi::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(45, 80, 22, 0);
+      transition: background .4s var(--e);
+    }
+
+    .gi:hover::after {
+      background: rgba(45, 80, 22, .18);
+    }
+
+    .fqi {
+      border-bottom: 1px solid #E4D9C8;
+    }
+
+    .fqi summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 18px 0;
+      font-weight: 500;
+      font-size: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #3D2B1A;
+      transition: color .2s;
+    }
+
+    .fqi summary:hover {
+      color: #2D5016;
+    }
+
+    .fqi summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .fqi summary::after {
+      content: '+';
+      font-size: 20px;
+      color: #5A8A2A;
+    }
+
+    .fqi[open] summary::after {
+      content: '-';
+    }
+
+    .fqb {
+      font-size: 13px;
+      color: #6B5A48;
+      padding-bottom: 18px;
+      line-height: 1.75;
+      animation: fqin .35s var(--e);
+    }
+
+    @keyframes fqin {
+      from {
+        opacity: 0;
+        transform: translateY(-6px);
+      }
+
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    .fi2 {
+      width: 100%;
+      border: 1px solid #D4C9B8;
+      padding: 12px 14px;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: #3D2B1A;
+      background: #fff;
+      outline: none;
+      transition: border-color .2s, box-shadow .2s;
+    }
+
+    .fi2:focus {
+      border-color: #5A8A2A;
+      box-shadow: 0 0 0 3px rgba(90, 138, 42, .12);
+    }
+
+    .fl {
+      display: block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: #8A7B6A;
+      margin-bottom: 6px;
+    }
+
+    .slbl {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: #5A8A2A;
+    }
+
+    .gline {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #8FAF6B, transparent);
+    }
+
+    .avb {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, .13);
+      border: 1px solid rgba(255, 255, 255, .28);
+      border-radius: 999px;
+      padding: 8px 16px;
+      backdrop-filter: blur(6px);
+    }
+
+    .pdot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #4ade80;
+      flex-shrink: 0;
+      animation: pd 2s infinite;
+    }
+
+    @keyframes pd {
+
+      0%,
+      100% {
+        box-shadow: 0 0 0 0 rgba(74, 222, 128, .5);
+      }
+
+      50% {
+        box-shadow: 0 0 0 6px rgba(74, 222, 128, 0);
+      }
+    }
+
+    .tsl {
+      display: none;
+    }
+
+    .tsl.on {
+      display: block;
+      animation: tf .5s var(--e);
+    }
+
+    @keyframes tf {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    .tdot {
+      width: 24px;
+      height: 2px;
+      background: #D4C9B8;
+      border: none;
+      cursor: pointer;
+      transition: background .3s, width .3s;
+    }
+
+    .tdot.on {
+      background: #5A8A2A;
+      width: 36px;
+    }
+
+    #stk {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 90;
+      opacity: 0;
+      transform: translateY(20px) scale(.9);
+      will-change: opacity, transform;
+      transition: opacity .4s var(--e), transform .5s var(--es);
+      pointer-events: none;
+    }
+
+    #stk.on {
+      opacity: 1;
+      transform: none;
+      pointer-events: auto;
+    }
+
+    #stk a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #2D5016;
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: 13px 22px;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, .25);
+      transition: background .3s var(--e), transform .3s var(--es), box-shadow .3s var(--e);
+      cursor: pointer;
+    }
+
+    #stk a:hover {
+      background: #3D6B1F;
+      transform: scale(1.04);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, .3);
+    }
+
+    section {
+      contain: layout style;
+    }
+
+    #hero {
+      contain: none;
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+
+      .reveal,
+      .reveal-left,
+      .reveal-right {
+        transition: none;
+        opacity: 1;
+        transform: none;
+      }
+
+      .pdot {
+        animation: none;
+      }
+    }
   </style>
 </head>
+
 <body>
-<div id="stk"><a href="#rezervare"><svg width="13" height="13" viewBox="0 0 16 16" fill="none"><rect x="2" y="3" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M5 2v2M11 2v2M2 7h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>Rezerva acum</a></div>
-<nav id="nav" class="px-6 md:px-12">
-  <div class="max-w-6xl mx-auto flex items-center justify-between">
-    <a href="#" class="flex items-center gap-2.5">
-      <svg width="26" height="26" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="13" stroke="#2D5016" stroke-width="1.5"/><path d="M14 7c0 0-5 4-5 8a5 5 0 0010 0c0-4-5-8-5-8z" fill="#5A8A2A" opacity=".75"/><path d="M14 12v8" stroke="#2D5016" stroke-width="1.2" stroke-linecap="round"/></svg>
-      <div><div class="font-serif text-[14px] text-soil leading-none">Casa Linistii</div><div class="font-sans text-[9px] text-stone tracking-[.25em] uppercase" style="margin-top:1px">Cazare in natura</div></div>
-    </a>
-    <div class="hidden md:flex items-center gap-8">
-      <a href="#camere"  class="font-sans text-[11px] tracking-[.14em] uppercase text-stone hover:text-forest transition-colors font-medium">Camere</a>
-      <a href="#dotari"  class="font-sans text-[11px] tracking-[.14em] uppercase text-stone hover:text-forest transition-colors font-medium">Dotari</a>
-      <a href="#galerie" class="font-sans text-[11px] tracking-[.14em] uppercase text-stone hover:text-forest transition-colors font-medium">Galerie</a>
-      <a href="#contact" class="font-sans text-[11px] tracking-[.14em] uppercase text-stone hover:text-forest transition-colors font-medium">Contact</a>
+  <div id="stk"><a href="#rezervare"><svg width="13" height="13" viewBox="0 0 16 16" fill="none">
+        <rect x="2" y="3" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="1.5" />
+        <path d="M5 2v2M11 2v2M2 7h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+      </svg>Rezerva acum</a></div>
+  <nav id="nav" class="px-6 md:px-12">
+    <div class="max-w-6xl mx-auto flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2.5">
+        <svg width="26" height="26" viewBox="0 0 28 28" fill="none">
+          <circle cx="14" cy="14" r="13" stroke="#2D5016" stroke-width="1.5" />
+          <path d="M14 7c0 0-5 4-5 8a5 5 0 0010 0c0-4-5-8-5-8z" fill="#5A8A2A" opacity=".75" />
+          <path d="M14 12v8" stroke="#2D5016" stroke-width="1.2" stroke-linecap="round" />
+        </svg>
+        <div>
+          <div class="font-serif text-[14px] text-soil leading-none">Casa Linistii</div>
+          <div class="font-sans text-[9px] text-stone tracking-[.25em] uppercase" style="margin-top:1px">Cazare in
+            natura</div>
+        </div>
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#camere"
+          class="font-sans text-[11px] tracking-[.14em] uppercase text-stone hover:text-forest transition-colors font-medium">Camere</a>
+        <a href="#dotari"
+          class="font-sans text-[11px] tracking-[.14em] uppercase text-stone hover:text-forest transition-colors font-medium">Dotari</a>
+        <a href="#galerie"
+          class="font-sans text-[11px] tracking-[.14em] uppercase text-stone hover:text-forest transition-colors font-medium">Galerie</a>
+        <a href="#contact"
+          class="font-sans text-[11px] tracking-[.14em] uppercase text-stone hover:text-forest transition-colors font-medium">Contact</a>
+      </div>
+      <a href="#rezervare" class="hidden md:block btn-p" style="padding:11px 24px;font-size:12px;">Rezerva acum</a>
+      <button id="mbtn" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Meniu"><span
+          class="block w-5 h-0.5 bg-soil transition-all duration-300"></span><span
+          class="block w-5 h-0.5 bg-soil transition-all duration-300"></span><span
+          class="block w-3.5 h-0.5 bg-soil transition-all duration-300 self-end"></span></button>
     </div>
-    <a href="#rezervare" class="hidden md:block btn-p" style="padding:11px 24px;font-size:12px;">Rezerva acum</a>
-    <button id="mbtn" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Meniu"><span class="block w-5 h-0.5 bg-soil transition-all duration-300"></span><span class="block w-5 h-0.5 bg-soil transition-all duration-300"></span><span class="block w-3.5 h-0.5 bg-soil transition-all duration-300 self-end"></span></button>
+  </nav>
+  <div id="mmenu"
+    class="fixed inset-0 bg-cream flex flex-col items-center justify-center gap-8 opacity-0 pointer-events-none transition-opacity duration-300"
+    style="z-index:90;">
+    <a href="#camere" onclick="cm()"
+      class="font-serif italic text-3xl text-soil hover:text-forest transition-colors">Camere</a>
+    <a href="#dotari" onclick="cm()"
+      class="font-serif italic text-3xl text-soil hover:text-forest transition-colors">Dotari</a>
+    <a href="#galerie" onclick="cm()"
+      class="font-serif italic text-3xl text-soil hover:text-forest transition-colors">Galerie</a>
+    <a href="#contact" onclick="cm()"
+      class="font-serif italic text-3xl text-soil hover:text-forest transition-colors">Contact</a>
+    <a href="#rezervare" onclick="cm()" class="btn-p mt-4">Rezerva acum</a>
   </div>
-</nav>
-<div id="mmenu" class="fixed inset-0 bg-cream flex flex-col items-center justify-center gap-8 opacity-0 pointer-events-none transition-opacity duration-300" style="z-index:90;">
-  <a href="#camere" onclick="cm()" class="font-serif italic text-3xl text-soil hover:text-forest transition-colors">Camere</a>
-  <a href="#dotari" onclick="cm()" class="font-serif italic text-3xl text-soil hover:text-forest transition-colors">Dotari</a>
-  <a href="#galerie" onclick="cm()" class="font-serif italic text-3xl text-soil hover:text-forest transition-colors">Galerie</a>
-  <a href="#contact" onclick="cm()" class="font-serif italic text-3xl text-soil hover:text-forest transition-colors">Contact</a>
-  <a href="#rezervare" onclick="cm()" class="btn-p mt-4">Rezerva acum</a>
-</div>
-<section id="hero">
-  <div id="hbg"></div>
-  <div class="relative z-10 max-w-6xl mx-auto px-6 md:px-12 py-32">
-    <div class="max-w-xl">
-      <div class="avb w-fit mb-8 reveal"><div class="pdot"></div><span class="font-sans text-[11px] text-white font-medium">Locuri disponibile saptamana aceasta</span></div>
-      <p class="slbl mb-5 reveal" style="transition-delay:.05s;color:rgba(190,230,160,.85);">Pensiune agroturistica</p>
-      <h1 class="font-serif italic text-white leading-[1.05] mb-5 reveal" style="font-size:clamp(44px,7vw,78px);transition-delay:.1s;">Liniste si natura<br/>la doi pasi<br/>de Chisinau</h1>
-      <p class="font-sans font-light text-[15px] text-white/70 leading-relaxed mb-10 reveal" style="transition-delay:.18s;">Cazare agroturistica, sauna privata, terasa panoramica si mancare traditionala gatita cu drag.</p>
-      <div class="flex flex-wrap gap-4 reveal" style="transition-delay:.26s;"><a href="#rezervare" class="btn-p">Rezerva o camera</a><a href="#camere" class="btn-ow">Vezi camerele</a></div>
-      <div class="hidden lg:flex gap-3 mt-10 reveal" style="transition-delay:.36s;">
-        <div class="flex items-center gap-3 bg-white/10 border border-white/20 rounded-xl px-4 py-3" style="backdrop-filter:blur(8px);"><span class="font-sans text-[10px] text-white/60">De la</span><span class="font-serif italic text-[20px] text-white leading-none">350 MDL</span><span class="font-sans text-[10px] text-white/60">/ noapte</span></div>
-        <div class="flex items-center gap-3 bg-white/10 border border-white/20 rounded-xl px-4 py-3" style="backdrop-filter:blur(8px);"><svg width="12" height="12" viewBox="0 0 20 20" fill="#86efac"><path d="M10 2l2 6h6l-5 3.6 1.9 6L10 14l-4.9 3.6L7 11.6 2 8h6L10 2z"/></svg><span class="font-sans text-[13px] text-white font-medium">5.0 pe Google</span></div>
-        <div class="flex items-center gap-3 bg-white/10 border border-white/20 rounded-xl px-4 py-3" style="backdrop-filter:blur(8px);"><span class="font-sans text-[13px] text-white">55 km de Chisinau</span></div>
+  <section id="hero">
+    <div id="hbg"></div>
+    <div class="relative z-10 max-w-6xl mx-auto px-6 md:px-12 py-32">
+      <div class="max-w-xl">
+        <div class="avb w-fit mb-8 reveal">
+          <div class="pdot"></div><span class="font-sans text-[11px] text-white font-medium">Locuri disponibile
+            saptamana aceasta</span>
+        </div>
+        <p class="slbl mb-5 reveal" style="transition-delay:.05s;color:rgba(190,230,160,.85);">Pensiune agroturistica
+        </p>
+        <h1 class="font-serif italic text-white leading-[1.05] mb-5 reveal"
+          style="font-size:clamp(44px,7vw,78px);transition-delay:.1s;">Liniste si natura<br />la doi pasi<br />de
+          Chisinau</h1>
+        <p class="font-sans font-light text-[15px] text-white/70 leading-relaxed mb-10 reveal"
+          style="transition-delay:.18s;">Cazare agroturistica, sauna privata, terasa panoramica si mancare traditionala
+          gatita cu drag.</p>
+        <div class="flex flex-wrap gap-4 reveal" style="transition-delay:.26s;"><a href="#rezervare"
+            class="btn-p">Rezerva o camera</a><a href="#camere" class="btn-ow">Vezi camerele</a></div>
+        <div class="hidden lg:flex gap-3 mt-10 reveal" style="transition-delay:.36s;">
+          <div class="flex items-center gap-3 bg-white/10 border border-white/20 rounded-xl px-4 py-3"
+            style="backdrop-filter:blur(8px);"><span class="font-sans text-[10px] text-white/60">De la</span><span
+              class="font-serif italic text-[20px] text-white leading-none">350 MDL</span><span
+              class="font-sans text-[10px] text-white/60">/ noapte</span></div>
+          <div class="flex items-center gap-3 bg-white/10 border border-white/20 rounded-xl px-4 py-3"
+            style="backdrop-filter:blur(8px);"><svg width="12" height="12" viewBox="0 0 20 20" fill="#86efac">
+              <path d="M10 2l2 6h6l-5 3.6 1.9 6L10 14l-4.9 3.6L7 11.6 2 8h6L10 2z" />
+            </svg><span class="font-sans text-[13px] text-white font-medium">5.0 pe Google</span></div>
+          <div class="flex items-center gap-3 bg-white/10 border border-white/20 rounded-xl px-4 py-3"
+            style="backdrop-filter:blur(8px);"><span class="font-sans text-[13px] text-white">55 km de Chisinau</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="border-y border-black/[.07] bg-white py-5 px-6">
+    <div class="max-w-5xl mx-auto flex flex-wrap items-center justify-center gap-6 md:gap-12">
+      <div class="flex items-center gap-2 font-sans text-[12px] font-medium text-soil reveal"><svg width="13"
+          height="13" viewBox="0 0 20 20" fill="#5A8A2A">
+          <path d="M10 2l2 6h6l-5 3.6 1.9 6L10 14l-4.9 3.6L7 11.6 2 8h6L10 2z" />
+        </svg>5.0 pe Google</div>
+      <div class="w-px h-4 bg-black/10 hidden md:block"></div>
+      <div class="font-sans text-[12px] text-stone reveal" style="transition-delay:.06s;">&#10003; Rezervare directa
+        fara comision</div>
+      <div class="w-px h-4 bg-black/10 hidden md:block"></div>
+      <div class="font-sans text-[12px] text-stone reveal" style="transition-delay:.1s;">&#10003; Mic dejun inclus</div>
+      <div class="w-px h-4 bg-black/10 hidden md:block"></div>
+      <div class="font-sans text-[12px] text-stone reveal" style="transition-delay:.14s;">&#10003; Sauna privata</div>
+      <div class="w-px h-4 bg-black/10 hidden md:block"></div>
+      <div class="font-sans text-[12px] text-stone reveal" style="transition-delay:.18s;">&#10003; Parcare gratuita
       </div>
     </div>
   </div>
-</section>
-<div class="border-y border-black/[.07] bg-white py-5 px-6"><div class="max-w-5xl mx-auto flex flex-wrap items-center justify-center gap-6 md:gap-12"><div class="flex items-center gap-2 font-sans text-[12px] font-medium text-soil reveal"><svg width="13" height="13" viewBox="0 0 20 20" fill="#5A8A2A"><path d="M10 2l2 6h6l-5 3.6 1.9 6L10 14l-4.9 3.6L7 11.6 2 8h6L10 2z"/></svg>5.0 pe Google</div><div class="w-px h-4 bg-black/10 hidden md:block"></div><div class="font-sans text-[12px] text-stone reveal" style="transition-delay:.06s;">&#10003; Rezervare directa fara comision</div><div class="w-px h-4 bg-black/10 hidden md:block"></div><div class="font-sans text-[12px] text-stone reveal" style="transition-delay:.1s;">&#10003; Mic dejun inclus</div><div class="w-px h-4 bg-black/10 hidden md:block"></div><div class="font-sans text-[12px] text-stone reveal" style="transition-delay:.14s;">&#10003; Sauna privata</div><div class="w-px h-4 bg-black/10 hidden md:block"></div><div class="font-sans text-[12px] text-stone reveal" style="transition-delay:.18s;">&#10003; Parcare gratuita</div></div></div>
-<section id="camere" class="py-24 px-6 md:px-12"><div class="max-w-6xl mx-auto"><div class="text-center mb-14"><p class="slbl mb-4 reveal">Cazare</p><h2 class="font-serif italic text-[clamp(30px,4vw,48px)] leading-tight text-soil reveal" style="transition-delay:.08s;">Camerele noastre</h2><p class="font-sans font-light text-[14px] text-stone mt-3 max-w-sm mx-auto reveal" style="transition-delay:.14s;">Fiecare camera un refugiu personal gandit pentru confortul dumneavoastra.</p></div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-<div class="rm reveal" style="transition-delay:.06s;"><div class="rim"><img src="CasutaLinistii/700679143_1583605600435816_8038782600388271592_n.jpg" alt="" loading="lazy"/></div><div style="position:absolute;top:12px;right:12px;background:rgba(250,246,239,.93);padding:8px 12px;"><div class="font-serif italic text-[18px] text-soil leading-none">350 MDL</div><div class="font-sans text-[10px] text-stone">/ noapte</div></div><div class="p-6"><span class="rtag">Standard</span><h3 class="font-serif text-[18px] text-soil mt-3 mb-2">Dormitor Standard</h3><p class="font-sans font-light text-[13px] text-stone leading-relaxed mb-4">Pat dublu confortabil, tavan din lemn, baie privata si vedere la gradina verde.</p><div class="flex flex-wrap gap-1.5"><span class="rtag">Wi-Fi</span><span class="rtag">AC</span><span class="rtag">Baie privata</span></div></div><a href="#rezervare" class="rbar">Rezerva aceasta camera &rarr;</a></div>
-<div class="rm reveal" style="transition-delay:.12s;border-color:#8FAF6B;"><div style="position:absolute;top:12px;left:12px;z-index:10;background:#2D5016;color:#fff;font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:5px 10px;border-radius:2px;">&#9733; Recomandat</div><div class="rim"><img src="CasutaLinistii/702144204_1583605473769162_5408807598701957422_n.jpg" alt="" loading="lazy"/></div><div style="position:absolute;top:12px;right:12px;background:rgba(250,246,239,.93);padding:8px 12px;"><div class="font-serif italic text-[18px] leading-none" style="color:#2D5016">500 MDL</div><div class="font-sans text-[10px] text-stone">/ noapte</div></div><div class="p-6"><span class="rtag" style="background:#dcfce7;color:#166534;">Cu balcon</span><h3 class="font-serif text-[18px] text-soil mt-3 mb-2">Dormitor cu Balcon</h3><p class="font-sans font-light text-[13px] text-stone leading-relaxed mb-4">Camera spatioasa cu balcon privat si vedere panoramica la natura. Mic dejun inclus.</p><div class="flex flex-wrap gap-1.5"><span class="rtag">Balcon privat</span><span class="rtag">Mic dejun</span><span class="rtag">Vedere</span></div></div><a href="#rezervare" class="rbar" style="background:#1a3a08;">Rezerva aceasta camera &rarr;</a></div>
-<div class="rm reveal" style="transition-delay:.18s;"><div class="rim"><img src="CasutaLinistii/698900278_1583605420435834_113331466901008054_n.jpg" alt="" loading="lazy"/></div><div style="position:absolute;top:12px;right:12px;background:rgba(250,246,239,.93);padding:8px 12px;"><div class="font-serif italic text-[18px] text-soil leading-none">700 MDL</div><div class="font-sans text-[10px] text-stone">/ noapte</div></div><div class="p-6"><span class="rtag" style="background:#fef3c7;color:#92400e;">Premium</span><h3 class="font-serif text-[18px] text-soil mt-3 mb-2">Living Mansarda</h3><p class="font-sans font-light text-[13px] text-stone leading-relaxed mb-4">Spatiu unic cu semineu, canapea confortabila si tavan arcuit din lemn natural.</p><div class="flex flex-wrap gap-1.5"><span class="rtag">Semineu</span><span class="rtag">Canapea</span><span class="rtag">Panoramica</span></div></div><a href="#rezervare" class="rbar">Rezerva aceasta camera &rarr;</a></div>
-</div></div></section>
-<section class="py-24 px-6 md:px-12" style="background:#f5f0e8;"><div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-center"><div class="reveal-left"><p class="slbl mb-5">Despre noi</p><h2 class="font-serif italic text-[clamp(32px,4.5vw,52px)] leading-[1.07] text-soil mb-6">O experienta autentica,<br/>departe de agitatie</h2><div class="gline mb-7" style="max-width:80px;"></div><p class="font-sans font-light text-[14px] text-stone leading-[1.9] mb-5">De peste 10 ani, Casa Linistii ii primeste pe oaspeti ca pe membrii propriei familii. Fiecare colt al proprietatii a fost gandit pentru confort, liniste si conexiune cu natura.</p><p class="font-sans font-light text-[14px] text-stone leading-[1.9] mb-10">Mancarea e gatita cu dragoste, vinul e din via noastra, iar linistea o gasiti oriunde va uitati.</p><div class="flex items-center gap-4"><div class="w-px h-10 bg-sage"></div><div><div class="font-serif italic text-[18px] text-forest">Familia Gazdelor</div><div class="font-sans text-[10px] tracking-wide uppercase text-stone">Casa Linistii</div></div></div></div><div class="reveal-right relative"><div class="aspect-[4/3] overflow-hidden rounded-sm"><img src="CasutaLinistii/697225718_1583605327102510_1377843134156047989_n.jpg" alt="" class="w-full h-full object-cover" loading="lazy"/></div><div class="absolute -top-3 -left-3 w-10 h-10 border-t-2 border-l-2 border-leaf pointer-events-none"></div><div class="absolute -bottom-3 -right-3 w-10 h-10 border-b-2 border-r-2 border-leaf pointer-events-none"></div></div></div></section>
-<section id="dotari" class="py-24 px-6 md:px-12"><div class="max-w-6xl mx-auto"><div class="text-center mb-14"><p class="slbl mb-4 reveal">Dotari exclusive</p><h2 class="font-serif italic text-[clamp(28px,4vw,48px)] leading-tight text-soil reveal" style="transition-delay:.08s;">Tot ce aveti nevoie<br/>pentru o vacanta perfecta</h2></div><div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4"><div class="ac rounded-sm reveal-left" style="height:320px;"><img src="CasutaLinistii/700490029_1583605183769191_3080902622042142121_n.jpg" alt="" loading="lazy"/><div class="cap"><div class="font-serif italic text-white text-[21px] mb-1">Sauna Finlandeza</div><div class="font-sans text-[12px] text-white/70">Disponibila la rezervare</div></div></div><div class="ac rounded-sm reveal-right" style="height:320px;"><img src="CasutaLinistii/699650826_1583604403769269_7907154929199713212_n.jpg" alt="" loading="lazy"/><div class="cap"><div class="font-serif italic text-white text-[21px] mb-1">Terasa cu Scaun Suspendat</div><div class="font-sans text-[12px] text-white/70">Relaxare in aer liber</div></div></div></div><div class="grid grid-cols-1 md:grid-cols-3 gap-4"><div class="ac rounded-sm reveal" style="height:210px;transition-delay:.06s;"><img src="CasutaLinistii/700087240_1583603363769373_7721247601224271651_n.jpg" alt="" loading="lazy"/><div class="cap"><div class="font-serif italic text-white text-[16px]">Foisor cu Leagan</div></div></div><div class="ac rounded-sm reveal" style="height:210px;transition-delay:.12s;"><img src="CasutaLinistii/626924269_122101603131246531_7479527550093020482_n.jpg" alt="" loading="lazy"/><div class="cap"><div class="font-serif italic text-white text-[16px]">Gratar si Bucatarie Exterioara</div></div></div><div class="ac rounded-sm reveal" style="height:210px;transition-delay:.18s;"><img src="CasutaLinistii/700418436_1583604917102551_7985881173215073610_n.jpg" alt="" loading="lazy"/><div class="cap"><div class="font-serif italic text-white text-[16px]">Mancare Traditionala</div></div></div></div></div></section>
-<section id="galerie" class="py-24 px-6 md:px-12" style="background:#f5f0e8;"><div class="max-w-6xl mx-auto"><div class="mb-12"><p class="slbl mb-3 reveal">Galerie foto</p><h2 class="font-serif italic text-[clamp(26px,3.5vw,44px)] text-soil reveal" style="transition-delay:.08s;">La noi la Casa Linistii</h2></div><div class="grid grid-cols-2 md:grid-cols-3 gap-3 mb-3"><div class="gi rounded-sm reveal" style="height:210px;transition-delay:.04s;"><img src="CasutaLinistii/648103319_122110162623246531_1215205236711923298_n.jpg" alt="" loading="lazy"/></div><div class="gi rounded-sm reveal" style="height:210px;transition-delay:.08s;"><img src="CasutaLinistii/698900278_1583605420435834_113331466901008054_n.jpg" alt="" loading="lazy"/></div><div class="gi rounded-sm reveal" style="height:210px;transition-delay:.12s;"><img src="CasutaLinistii/700418436_1583604917102551_7985881173215073610_n.jpg" alt="" loading="lazy"/></div></div><div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-3"><div class="gi rounded-sm md:col-span-2 reveal-left" style="height:195px;"><img src="CasutaLinistii/697225718_1583605327102510_1377843134156047989_n.jpg" alt="" loading="lazy"/></div><div class="gi rounded-sm reveal" style="height:195px;transition-delay:.08s;"><img src="CasutaLinistii/700679143_1583605600435816_8038782600388271592_n.jpg" alt="" loading="lazy"/></div><div class="gi rounded-sm reveal" style="height:195px;transition-delay:.14s;"><img src="CasutaLinistii/700707948_1583604680435908_8060890469614247948_n.jpg" alt="" loading="lazy"/></div></div><div class="grid grid-cols-2 md:grid-cols-3 gap-3"><div class="gi rounded-sm reveal" style="height:195px;transition-delay:.04s;"><img src="CasutaLinistii/702144204_1583605473769162_5408807598701957422_n.jpg" alt="" loading="lazy"/></div><div class="gi rounded-sm reveal" style="height:195px;transition-delay:.08s;"><img src="CasutaLinistii/698621840_1583604693769240_820545193712728758_n.jpg" alt="" loading="lazy"/></div><div class="gi rounded-sm reveal" style="height:195px;transition-delay:.12s;"><img src="CasutaLinistii/701227638_1583605683769141_857462893613011379_n.jpg" alt="" loading="lazy"/></div></div></div></section>
-<section class="py-24 px-6 md:px-12"><div class="max-w-3xl mx-auto text-center"><p class="slbl mb-6 reveal">Ce spun oaspetii</p><div id="twrap" style="min-height:190px;"><div class="tsl on"><svg width="40" height="28" viewBox="0 0 48 32" fill="none" class="mx-auto mb-7 opacity-20"><path d="M0 32V18.667C0 7.573 6.4 1.493 19.2 0l1.6 3.2C14.4 4.907 11.2 8.107 10.667 12.8H16V32H0zm26.667 0V18.667C26.667 7.573 33.067 1.493 45.867 0L47.467 3.2c-6.4 1.707-9.6 4.907-10.134 9.6H43.2V32H26.667z" fill="#5A8A2A"/></svg><blockquote class="font-serif italic text-[clamp(18px,3vw,26px)] text-soil leading-[1.6] mb-8">"Am stat 3 nopti si am plecat cu sufletul plin. Sauna, linistea, mancarea - nimic nu se poate compara. Revenim cu siguranta!"</blockquote><div class="flex items-center justify-center gap-3"><div class="w-px h-7 bg-sage/50"></div><div class="text-left"><div class="font-sans font-semibold text-[13px] text-soil">Alexandru M.</div><div class="font-sans text-[11px] text-stone">Chisinau</div></div></div></div><div class="tsl"><svg width="40" height="28" viewBox="0 0 48 32" fill="none" class="mx-auto mb-7 opacity-20"><path d="M0 32V18.667C0 7.573 6.4 1.493 19.2 0l1.6 3.2C14.4 4.907 11.2 8.107 10.667 12.8H16V32H0zm26.667 0V18.667C26.667 7.573 33.067 1.493 45.867 0L47.467 3.2c-6.4 1.707-9.6 4.907-10.134 9.6H43.2V32H26.667z" fill="#5A8A2A"/></svg><blockquote class="font-serif italic text-[clamp(18px,3vw,26px)] text-soil leading-[1.6] mb-8">"Un loc magic. Am venit cu familia si ne-am relaxat complet. Terasa superba, aer curat, ospitalitate deosebita."</blockquote><div class="flex items-center justify-center gap-3"><div class="w-px h-7 bg-sage/50"></div><div class="text-left"><div class="font-sans font-semibold text-[13px] text-soil">Maria si Andrei P.</div><div class="font-sans text-[11px] text-stone">Bucuresti</div></div></div></div><div class="tsl"><svg width="40" height="28" viewBox="0 0 48 32" fill="none" class="mx-auto mb-7 opacity-20"><path d="M0 32V18.667C0 7.573 6.4 1.493 19.2 0l1.6 3.2C14.4 4.907 11.2 8.107 10.667 12.8H16V32H0zm26.667 0V18.667C26.667 7.573 33.067 1.493 45.867 0L47.467 3.2c-6.4 1.707-9.6 4.907-10.134 9.6H43.2V32H26.667z" fill="#5A8A2A"/></svg><blockquote class="font-serif italic text-[clamp(18px,3vw,26px)] text-soil leading-[1.6] mb-8">"Mancarea traditionala absolut delicioasa. Sauna de seara, linistea noptii - o experienta pe care o recomand tuturor."</blockquote><div class="flex items-center justify-center gap-3"><div class="w-px h-7 bg-sage/50"></div><div class="text-left"><div class="font-sans font-semibold text-[13px] text-soil">Elena V.</div><div class="font-sans text-[11px] text-stone">Iasi</div></div></div></div></div><div class="flex justify-center gap-3 mt-8 reveal"><button class="tdot on" data-t="0"></button><button class="tdot" data-t="1"></button><button class="tdot" data-t="2"></button></div></div></section>
-<section id="rezervare" class="py-24 px-6 md:px-12" style="background:#f5f0e8;"><div class="max-w-4xl mx-auto"><div class="text-center mb-12"><p class="slbl mb-4 reveal">Rezervare directa</p><h2 class="font-serif italic text-[clamp(28px,4vw,46px)] text-soil reveal" style="transition-delay:.08s;">Rezervati fara comision</h2><p class="font-sans font-light text-[14px] text-stone mt-3 reveal" style="transition-delay:.14s;">Pretul afisat este pretul final. Nicio taxa suplimentara.</p></div><div class="bg-white p-8 md:p-12 reveal" style="box-shadow:0 4px 40px rgba(0,0,0,.07);transition-delay:.1s;"><div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5"><div><label class="fl">Nume si prenume *</label><input type="text" class="fi2" placeholder="Ion Popescu" autocomplete="name"/></div><div><label class="fl">Telefon / WhatsApp *</label><input type="tel" class="fi2" placeholder="+373 XX XXX XXX" autocomplete="tel"/></div><div><label class="fl">Data sosirii *</label><input type="date" class="fi2"/></div><div><label class="fl">Data plecarii *</label><input type="date" class="fi2"/></div><div><label class="fl">Tipul camerei</label><select class="fi2"><option>Dormitor Standard - 350 MDL</option><option>Dormitor cu Balcon - 500 MDL</option><option>Living Mansarda - 700 MDL</option></select></div><div><label class="fl">Numar de persoane</label><select class="fi2"><option>1 persoana</option><option>2 persoane</option><option>3-4 persoane</option><option>5+ persoane</option></select></div></div><div class="mb-6"><label class="fl">Mentiuni speciale</label><textarea class="fi2" rows="3" placeholder="Aniversare, copii, sauna..."></textarea></div><button id="fsub" type="button" class="btn-p w-full text-center text-[13px]" style="padding:16px;" onclick="sub()">Trimite cererea de rezervare</button><div id="fok" class="hidden mt-4 text-center"><div class="inline-flex items-center gap-2 text-forest font-sans text-[14px] font-medium"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#2D5016" stroke-width="1.5"/><path d="M5.5 9l2.5 2.5 4.5-4.5" stroke="#2D5016" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Cererea a fost trimisa!</div></div><p class="text-center font-sans text-[12px] text-stone mt-3">Va confirmam in maxim 2 ore</p></div></div></section>
-<section class="py-20 px-6 md:px-12"><div class="max-w-2xl mx-auto"><p class="slbl mb-4 text-center reveal">FAQ</p><h2 class="font-serif italic text-[clamp(26px,3.5vw,40px)] text-soil text-center mb-12 reveal" style="transition-delay:.08s;">Tot ce trebuie sa stiti</h2><div class="reveal" style="transition-delay:.12s;"><details class="fqi"><summary>Cum ajung la Casa Linistii?</summary><p class="fqb">Ne gasiti la 55 km de Chisinau. Adresa exacta vi se trimite la confirmare.</p></details><details class="fqi"><summary>Este micul dejun inclus?</summary><p class="fqb">Micul dejun este inclus la Dormitorul cu Balcon. La celelalte camere se adauga 60 MDL/persoana.</p></details><details class="fqi"><summary>Cum functioneaza sauna privata?</summary><p class="fqb">Sauna se rezerva cu 2 ore inainte. Sesiunile dureaza 1.5-2 ore.</p></details><details class="fqi"><summary>Putem veni cu animale?</summary><p class="fqb">Da! Suprataxa de curatenie 100 MDL per sejur.</p></details><details class="fqi"><summary>Politica de anulare?</summary><p class="fqb">Anularile cu 48+ ore inainte sunt gratuite. Tardiv retinem prima noapte.</p></details><details class="fqi"><summary>Mese pentru grupuri?</summary><p class="fqb">Da! Organizam mese festive pentru pana la 30 persoane.</p></details></div></div></section>
-<section id="contact" class="py-20 px-6 md:px-12" style="background:#2D5016;"><div class="max-w-4xl mx-auto text-center"><p class="slbl mb-5 reveal" style="color:rgba(190,230,160,.8);">Contact</p><h2 class="font-serif italic text-[clamp(28px,4.5vw,52px)] text-white leading-tight mb-10 reveal" style="transition-delay:.08s;">Suntem bucurosi<br/>sa va raspundem</h2><div class="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-10 reveal" style="transition-delay:.14s;"><div><div class="font-sans text-[10px] tracking-[.2em] uppercase text-green-300 mb-2">Telefon</div><div class="font-serif italic text-[16px] text-white">+373 XX XXX XXX</div></div><div><div class="font-sans text-[10px] tracking-[.2em] uppercase text-green-300 mb-2">Program</div><div class="font-serif italic text-[16px] text-white">Check-in 14:00</div><div class="font-sans text-[12px] text-green-200">Check-out 12:00</div></div><div><div class="font-sans text-[10px] tracking-[.2em] uppercase text-green-300 mb-2">Locatie</div><div class="font-serif italic text-[16px] text-white">Moldova</div><div class="font-sans text-[12px] text-green-200">55 km de Chisinau</div></div></div><div class="gline mb-8" style="background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);"></div><div class="flex justify-center gap-6 reveal" style="transition-delay:.2s;"><a href="#" class="font-sans text-[12px] text-green-200 hover:text-white transition-colors">Facebook</a><a href="#" class="font-sans text-[12px] text-green-200 hover:text-white transition-colors">Instagram</a><a href="#" class="font-sans text-[12px] text-green-200 hover:text-white transition-colors">WhatsApp</a></div></div></section>
-<footer style="background:#1a3a08;border-top:1px solid rgba(255,255,255,.06);"><div class="max-w-6xl mx-auto px-6 md:px-12 py-7 flex flex-col md:flex-row justify-between items-center gap-4"><div class="flex items-center gap-2.5"><svg width="20" height="20" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="13" stroke="#5A8A2A" stroke-width="1"/><path d="M14 7c0 0-5 4-5 8a5 5 0 0010 0c0-4-5-8-5-8z" fill="#8FAF6B" opacity=".7"/></svg><span class="font-serif text-[13px] text-green-200 tracking-wide">Casa Linistii</span></div><div class="font-sans text-[11px] text-green-800">2026 Casa Linistii</div><a href="#" class="font-sans text-[11px] text-green-800 hover:text-green-300 transition-colors">Confidentialitate</a></div></footer>
-<script>
-  // Nav + sticky
-  const nav=document.getElementById('nav'),stk=document.getElementById('stk');
-  window.addEventListener('scroll',()=>{nav.classList.toggle('sc',scrollY>50);stk.classList.toggle('on',scrollY>window.innerHeight*.55);},{passive:true});
+  <section id="camere" class="py-24 px-6 md:px-12">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-14">
+        <p class="slbl mb-4 reveal">Cazare</p>
+        <h2 class="font-serif italic text-[clamp(30px,4vw,48px)] leading-tight text-soil reveal"
+          style="transition-delay:.08s;">Camerele noastre</h2>
+        <p class="font-sans font-light text-[14px] text-stone mt-3 max-w-sm mx-auto reveal"
+          style="transition-delay:.14s;">Fiecare camera un refugiu personal gandit pentru confortul dumneavoastra.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div class="rm reveal" style="transition-delay:.06s;">
+          <div class="rim"><img src="CasutaLinistii/700679143_1583605600435816_8038782600388271592_n.jpg" alt=""
+              loading="lazy" /></div>
+          <div style="position:absolute;top:12px;right:12px;background:rgba(250,246,239,.93);padding:8px 12px;">
+            <div class="font-serif italic text-[18px] text-soil leading-none">350 MDL</div>
+            <div class="font-sans text-[10px] text-stone">/ noapte</div>
+          </div>
+          <div class="p-6"><span class="rtag">Standard</span>
+            <h3 class="font-serif text-[18px] text-soil mt-3 mb-2">Dormitor Standard</h3>
+            <p class="font-sans font-light text-[13px] text-stone leading-relaxed mb-4">Pat dublu confortabil, tavan din
+              lemn, baie privata si vedere la gradina verde.</p>
+            <div class="flex flex-wrap gap-1.5"><span class="rtag">Wi-Fi</span><span class="rtag">AC</span><span
+                class="rtag">Baie privata</span></div>
+          </div><a href="#rezervare" class="rbar">Rezerva aceasta camera &rarr;</a>
+        </div>
+        <div class="rm reveal" style="transition-delay:.12s;border-color:#8FAF6B;">
+          <div
+            style="position:absolute;top:12px;left:12px;z-index:10;background:#2D5016;color:#fff;font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:5px 10px;border-radius:2px;">
+            &#9733; Recomandat</div>
+          <div class="rim"><img src="CasutaLinistii/702144204_1583605473769162_5408807598701957422_n.jpg" alt=""
+              loading="lazy" /></div>
+          <div style="position:absolute;top:12px;right:12px;background:rgba(250,246,239,.93);padding:8px 12px;">
+            <div class="font-serif italic text-[18px] leading-none" style="color:#2D5016">500 MDL</div>
+            <div class="font-sans text-[10px] text-stone">/ noapte</div>
+          </div>
+          <div class="p-6"><span class="rtag" style="background:#dcfce7;color:#166534;">Cu balcon</span>
+            <h3 class="font-serif text-[18px] text-soil mt-3 mb-2">Dormitor cu Balcon</h3>
+            <p class="font-sans font-light text-[13px] text-stone leading-relaxed mb-4">Camera spatioasa cu balcon
+              privat si vedere panoramica la natura. Mic dejun inclus.</p>
+            <div class="flex flex-wrap gap-1.5"><span class="rtag">Balcon privat</span><span class="rtag">Mic
+                dejun</span><span class="rtag">Vedere</span></div>
+          </div><a href="#rezervare" class="rbar" style="background:#1a3a08;">Rezerva aceasta camera &rarr;</a>
+        </div>
+        <div class="rm reveal" style="transition-delay:.18s;">
+          <div class="rim"><img src="CasutaLinistii/698900278_1583605420435834_113331466901008054_n.jpg" alt=""
+              loading="lazy" /></div>
+          <div style="position:absolute;top:12px;right:12px;background:rgba(250,246,239,.93);padding:8px 12px;">
+            <div class="font-serif italic text-[18px] text-soil leading-none">700 MDL</div>
+            <div class="font-sans text-[10px] text-stone">/ noapte</div>
+          </div>
+          <div class="p-6"><span class="rtag" style="background:#fef3c7;color:#92400e;">Premium</span>
+            <h3 class="font-serif text-[18px] text-soil mt-3 mb-2">Living Mansarda</h3>
+            <p class="font-sans font-light text-[13px] text-stone leading-relaxed mb-4">Spatiu unic cu semineu, canapea
+              confortabila si tavan arcuit din lemn natural.</p>
+            <div class="flex flex-wrap gap-1.5"><span class="rtag">Semineu</span><span class="rtag">Canapea</span><span
+                class="rtag">Panoramica</span></div>
+          </div><a href="#rezervare" class="rbar">Rezerva aceasta camera &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-24 px-6 md:px-12" style="background:#f5f0e8;">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-center">
+      <div class="reveal-left">
+        <p class="slbl mb-5">Despre noi</p>
+        <h2 class="font-serif italic text-[clamp(32px,4.5vw,52px)] leading-[1.07] text-soil mb-6">O experienta
+          autentica,<br />departe de agitatie</h2>
+        <div class="gline mb-7" style="max-width:80px;"></div>
+        <p class="font-sans font-light text-[14px] text-stone leading-[1.9] mb-5">De peste 10 ani, Casa Linistii ii
+          primeste pe oaspeti ca pe membrii propriei familii. Fiecare colt al proprietatii a fost gandit pentru confort,
+          liniste si conexiune cu natura.</p>
+        <p class="font-sans font-light text-[14px] text-stone leading-[1.9] mb-10">Mancarea e gatita cu dragoste, vinul
+          e din via noastra, iar linistea o gasiti oriunde va uitati.</p>
+        <div class="flex items-center gap-4">
+          <div class="w-px h-10 bg-sage"></div>
+          <div>
+            <div class="font-serif italic text-[18px] text-forest">Familia Gazdelor</div>
+            <div class="font-sans text-[10px] tracking-wide uppercase text-stone">Casa Linistii</div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal-right relative">
+        <div class="aspect-[4/3] overflow-hidden rounded-sm"><img
+            src="CasutaLinistii/697225718_1583605327102510_1377843134156047989_n.jpg" alt=""
+            class="w-full h-full object-cover" loading="lazy" /></div>
+        <div class="absolute -top-3 -left-3 w-10 h-10 border-t-2 border-l-2 border-leaf pointer-events-none"></div>
+        <div class="absolute -bottom-3 -right-3 w-10 h-10 border-b-2 border-r-2 border-leaf pointer-events-none"></div>
+      </div>
+    </div>
+  </section>
+  <section id="dotari" class="py-24 px-6 md:px-12">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-14">
+        <p class="slbl mb-4 reveal">Dotari exclusive</p>
+        <h2 class="font-serif italic text-[clamp(28px,4vw,48px)] leading-tight text-soil reveal"
+          style="transition-delay:.08s;">Tot ce aveti nevoie<br />pentru o vacanta perfecta</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+        <div class="ac rounded-sm reveal-left" style="height:320px;"><img
+            src="CasutaLinistii/700490029_1583605183769191_3080902622042142121_n.jpg" alt="" loading="lazy" />
+          <div class="cap">
+            <div class="font-serif italic text-white text-[21px] mb-1">Sauna Finlandeza</div>
+            <div class="font-sans text-[12px] text-white/70">Disponibila la rezervare</div>
+          </div>
+        </div>
+        <div class="ac rounded-sm reveal-right" style="height:320px;"><img
+            src="CasutaLinistii/699650826_1583604403769269_7907154929199713212_n.jpg" alt="" loading="lazy" />
+          <div class="cap">
+            <div class="font-serif italic text-white text-[21px] mb-1">Terasa cu Scaun Suspendat</div>
+            <div class="font-sans text-[12px] text-white/70">Relaxare in aer liber</div>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="ac rounded-sm reveal" style="height:210px;transition-delay:.06s;"><img
+            src="CasutaLinistii/700087240_1583603363769373_7721247601224271651_n.jpg" alt="" loading="lazy" />
+          <div class="cap">
+            <div class="font-serif italic text-white text-[16px]">Foisor cu Leagan</div>
+          </div>
+        </div>
+        <div class="ac rounded-sm reveal" style="height:210px;transition-delay:.12s;"><img
+            src="CasutaLinistii/626924269_122101603131246531_7479527550093020482_n.jpg" alt="" loading="lazy" />
+          <div class="cap">
+            <div class="font-serif italic text-white text-[16px]">Gratar si Bucatarie Exterioara</div>
+          </div>
+        </div>
+        <div class="ac rounded-sm reveal" style="height:210px;transition-delay:.18s;"><img
+            src="CasutaLinistii/700418436_1583604917102551_7985881173215073610_n.jpg" alt="" loading="lazy" />
+          <div class="cap">
+            <div class="font-serif italic text-white text-[16px]">Mancare Traditionala</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="galerie" class="py-24 px-6 md:px-12" style="background:#f5f0e8;">
+    <div class="max-w-6xl mx-auto">
+      <div class="mb-12">
+        <p class="slbl mb-3 reveal">Galerie foto</p>
+        <h2 class="font-serif italic text-[clamp(26px,3.5vw,44px)] text-soil reveal" style="transition-delay:.08s;">La
+          noi la Casa Linistii</h2>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-3 mb-3">
+        <div class="gi rounded-sm reveal" style="height:210px;transition-delay:.04s;"><img
+            src="CasutaLinistii/648103319_122110162623246531_1215205236711923298_n.jpg" alt="" loading="lazy" /></div>
+        <div class="gi rounded-sm reveal" style="height:210px;transition-delay:.08s;"><img
+            src="CasutaLinistii/698900278_1583605420435834_113331466901008054_n.jpg" alt="" loading="lazy" /></div>
+        <div class="gi rounded-sm reveal" style="height:210px;transition-delay:.12s;"><img
+            src="CasutaLinistii/700418436_1583604917102551_7985881173215073610_n.jpg" alt="" loading="lazy" /></div>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-3">
+        <div class="gi rounded-sm md:col-span-2 reveal-left" style="height:195px;"><img
+            src="CasutaLinistii/697225718_1583605327102510_1377843134156047989_n.jpg" alt="" loading="lazy" /></div>
+        <div class="gi rounded-sm reveal" style="height:195px;transition-delay:.08s;"><img
+            src="CasutaLinistii/700679143_1583605600435816_8038782600388271592_n.jpg" alt="" loading="lazy" /></div>
+        <div class="gi rounded-sm reveal" style="height:195px;transition-delay:.14s;"><img
+            src="CasutaLinistii/700707948_1583604680435908_8060890469614247948_n.jpg" alt="" loading="lazy" /></div>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+        <div class="gi rounded-sm reveal" style="height:195px;transition-delay:.04s;"><img
+            src="CasutaLinistii/702144204_1583605473769162_5408807598701957422_n.jpg" alt="" loading="lazy" /></div>
+        <div class="gi rounded-sm reveal" style="height:195px;transition-delay:.08s;"><img
+            src="CasutaLinistii/698621840_1583604693769240_820545193712728758_n.jpg" alt="" loading="lazy" /></div>
+        <div class="gi rounded-sm reveal" style="height:195px;transition-delay:.12s;"><img
+            src="CasutaLinistii/701227638_1583605683769141_857462893613011379_n.jpg" alt="" loading="lazy" /></div>
+      </div>
+    </div>
+  </section>
+  <section class="py-24 px-6 md:px-12">
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="slbl mb-6 reveal">Ce spun oaspetii</p>
+      <div id="twrap" style="min-height:190px;">
+        <div class="tsl on"><svg width="40" height="28" viewBox="0 0 48 32" fill="none" class="mx-auto mb-7 opacity-20">
+            <path
+              d="M0 32V18.667C0 7.573 6.4 1.493 19.2 0l1.6 3.2C14.4 4.907 11.2 8.107 10.667 12.8H16V32H0zm26.667 0V18.667C26.667 7.573 33.067 1.493 45.867 0L47.467 3.2c-6.4 1.707-9.6 4.907-10.134 9.6H43.2V32H26.667z"
+              fill="#5A8A2A" />
+          </svg>
+          <blockquote class="font-serif italic text-[clamp(18px,3vw,26px)] text-soil leading-[1.6] mb-8">"Am stat 3
+            nopti si am plecat cu sufletul plin. Sauna, linistea, mancarea - nimic nu se poate compara. Revenim cu
+            siguranta!"</blockquote>
+          <div class="flex items-center justify-center gap-3">
+            <div class="w-px h-7 bg-sage/50"></div>
+            <div class="text-left">
+              <div class="font-sans font-semibold text-[13px] text-soil">Alexandru M.</div>
+              <div class="font-sans text-[11px] text-stone">Chisinau</div>
+            </div>
+          </div>
+        </div>
+        <div class="tsl"><svg width="40" height="28" viewBox="0 0 48 32" fill="none" class="mx-auto mb-7 opacity-20">
+            <path
+              d="M0 32V18.667C0 7.573 6.4 1.493 19.2 0l1.6 3.2C14.4 4.907 11.2 8.107 10.667 12.8H16V32H0zm26.667 0V18.667C26.667 7.573 33.067 1.493 45.867 0L47.467 3.2c-6.4 1.707-9.6 4.907-10.134 9.6H43.2V32H26.667z"
+              fill="#5A8A2A" />
+          </svg>
+          <blockquote class="font-serif italic text-[clamp(18px,3vw,26px)] text-soil leading-[1.6] mb-8">"Un loc magic.
+            Am venit cu familia si ne-am relaxat complet. Terasa superba, aer curat, ospitalitate deosebita."
+          </blockquote>
+          <div class="flex items-center justify-center gap-3">
+            <div class="w-px h-7 bg-sage/50"></div>
+            <div class="text-left">
+              <div class="font-sans font-semibold text-[13px] text-soil">Maria si Andrei P.</div>
+              <div class="font-sans text-[11px] text-stone">Bucuresti</div>
+            </div>
+          </div>
+        </div>
+        <div class="tsl"><svg width="40" height="28" viewBox="0 0 48 32" fill="none" class="mx-auto mb-7 opacity-20">
+            <path
+              d="M0 32V18.667C0 7.573 6.4 1.493 19.2 0l1.6 3.2C14.4 4.907 11.2 8.107 10.667 12.8H16V32H0zm26.667 0V18.667C26.667 7.573 33.067 1.493 45.867 0L47.467 3.2c-6.4 1.707-9.6 4.907-10.134 9.6H43.2V32H26.667z"
+              fill="#5A8A2A" />
+          </svg>
+          <blockquote class="font-serif italic text-[clamp(18px,3vw,26px)] text-soil leading-[1.6] mb-8">"Mancarea
+            traditionala absolut delicioasa. Sauna de seara, linistea noptii - o experienta pe care o recomand tuturor."
+          </blockquote>
+          <div class="flex items-center justify-center gap-3">
+            <div class="w-px h-7 bg-sage/50"></div>
+            <div class="text-left">
+              <div class="font-sans font-semibold text-[13px] text-soil">Elena V.</div>
+              <div class="font-sans text-[11px] text-stone">Iasi</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-center gap-3 mt-8 reveal"><button class="tdot on" data-t="0"></button><button
+          class="tdot" data-t="1"></button><button class="tdot" data-t="2"></button></div>
+    </div>
+  </section>
+  <section id="rezervare" class="py-24 px-6 md:px-12" style="background:#f5f0e8;">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-12">
+        <p class="slbl mb-4 reveal">Rezervare directa</p>
+        <h2 class="font-serif italic text-[clamp(28px,4vw,46px)] text-soil reveal" style="transition-delay:.08s;">
+          Rezervati fara comision</h2>
+        <p class="font-sans font-light text-[14px] text-stone mt-3 reveal" style="transition-delay:.14s;">Pretul afisat
+          este pretul final. Nicio taxa suplimentara.</p>
+      </div>
+      <div class="bg-white p-8 md:p-12 reveal" style="box-shadow:0 4px 40px rgba(0,0,0,.07);transition-delay:.1s;">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
+          <div><label class="fl">Nume si prenume *</label><input type="text" class="fi2" placeholder="Nume Prenume"
+              autocomplete="name" /></div>
+          <div><label class="fl">Telefon / WhatsApp *</label><input type="tel" class="fi2" placeholder="+373 XX XXX XXX"
+              autocomplete="tel" /></div>
+          <div><label class="fl">Data sosirii *</label><input type="date" class="fi2" /></div>
+          <div><label class="fl">Data plecarii *</label><input type="date" class="fi2" /></div>
+          <div><label class="fl">Tipul camerei</label><select class="fi2">
+              <option>Dormitor Standard - 350 MDL</option>
+              <option>Dormitor cu Balcon - 500 MDL</option>
+              <option>Living Mansarda - 700 MDL</option>
+            </select></div>
+          <div><label class="fl">Numar de persoane</label><select class="fi2">
+              <option>1 persoana</option>
+              <option>2 persoane</option>
+              <option>3-4 persoane</option>
+              <option>5+ persoane</option>
+            </select></div>
+        </div>
+        <div class="mb-6"><label class="fl">Mentiuni speciale</label><textarea class="fi2" rows="3"
+            placeholder="Aniversare, copii, sauna..."></textarea></div><button id="fsub" type="button"
+          class="btn-p w-full text-center text-[13px]" style="padding:16px;" onclick="sub()">Trimite cererea de
+          rezervare</button>
+        <div id="fok" class="hidden mt-4 text-center">
+          <div class="inline-flex items-center gap-2 text-forest font-sans text-[14px] font-medium"><svg width="18"
+              height="18" viewBox="0 0 18 18" fill="none">
+              <circle cx="9" cy="9" r="8" stroke="#2D5016" stroke-width="1.5" />
+              <path d="M5.5 9l2.5 2.5 4.5-4.5" stroke="#2D5016" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>Cererea a fost trimisa!</div>
+        </div>
+        <p class="text-center font-sans text-[12px] text-stone mt-3">Va confirmam in maxim 2 ore</p>
+      </div>
+    </div>
+  </section>
+  <section class="py-20 px-6 md:px-12">
+    <div class="max-w-2xl mx-auto">
+      <p class="slbl mb-4 text-center reveal">FAQ</p>
+      <h2 class="font-serif italic text-[clamp(26px,3.5vw,40px)] text-soil text-center mb-12 reveal"
+        style="transition-delay:.08s;">Tot ce trebuie sa stiti</h2>
+      <div class="reveal" style="transition-delay:.12s;">
+        <details class="fqi">
+          <summary>Cum ajung la Casa Linistii?</summary>
+          <p class="fqb">Ne gasiti la 55 km de Chisinau. Adresa exacta vi se trimite la confirmare.</p>
+        </details>
+        <details class="fqi">
+          <summary>Este micul dejun inclus?</summary>
+          <p class="fqb">Micul dejun este inclus la Dormitorul cu Balcon. La celelalte camere se adauga 60 MDL/persoana.
+          </p>
+        </details>
+        <details class="fqi">
+          <summary>Cum functioneaza sauna privata?</summary>
+          <p class="fqb">Sauna se rezerva cu 2 ore inainte. Sesiunile dureaza 1.5-2 ore.</p>
+        </details>
+        <details class="fqi">
+          <summary>Putem veni cu animale?</summary>
+          <p class="fqb">Da! Suprataxa de curatenie 100 MDL per sejur.</p>
+        </details>
+        <details class="fqi">
+          <summary>Politica de anulare?</summary>
+          <p class="fqb">Anularile cu 48+ ore inainte sunt gratuite. Tardiv retinem prima noapte.</p>
+        </details>
+        <details class="fqi">
+          <summary>Mese pentru grupuri?</summary>
+          <p class="fqb">Da! Organizam mese festive pentru pana la 30 persoane.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="py-20 px-6 md:px-12" style="background:#2D5016;">
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="slbl mb-5 reveal" style="color:rgba(190,230,160,.8);">Contact</p>
+      <h2 class="font-serif italic text-[clamp(28px,4.5vw,52px)] text-white leading-tight mb-10 reveal"
+        style="transition-delay:.08s;">Suntem bucurosi<br />sa va raspundem</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-10 reveal" style="transition-delay:.14s;">
+        <div>
+          <div class="font-sans text-[10px] tracking-[.2em] uppercase text-green-300 mb-2">Telefon</div>
+          <div class="font-serif italic text-[16px] text-white">+373 XX XXX XXX</div>
+        </div>
+        <div>
+          <div class="font-sans text-[10px] tracking-[.2em] uppercase text-green-300 mb-2">Program</div>
+          <div class="font-serif italic text-[16px] text-white">Check-in 14:00</div>
+          <div class="font-sans text-[12px] text-green-200">Check-out 12:00</div>
+        </div>
+        <div>
+          <div class="font-sans text-[10px] tracking-[.2em] uppercase text-green-300 mb-2">Locatie</div>
+          <div class="font-serif italic text-[16px] text-white">Raionul Orhei</div>
+          <div class="font-sans text-[12px] text-green-200">Moldova · 55 km de Chisinau</div>
+        </div>
+      </div>
 
-  // Mobile menu
-  let mo=false;const mb=document.getElementById('mbtn'),mm=document.getElementById('mmenu');
-  mb.addEventListener('click',()=>{mo=!mo;mm.style.opacity=mo?'1':'0';mm.style.pointerEvents=mo?'auto':'none';const s=mb.querySelectorAll('span');if(mo){s[0].style.transform='rotate(45deg) translate(5px,5px)';s[1].style.opacity='0';s[2].style.transform='rotate(-45deg) translate(5px,-5px)';s[2].style.width='20px';}else{s[0].style.transform='';s[1].style.opacity='1';s[2].style.transform='';s[2].style.width='';}});
-  function cm(){mo=false;mm.style.opacity='0';mm.style.pointerEvents='none';const s=mb.querySelectorAll('span');s[0].style.transform='';s[1].style.opacity='1';s[2].style.transform='';s[2].style.width='';}
+      <!-- Google Maps embed -->
+      <div class="reveal mb-8 overflow-hidden rounded-sm" style="transition-delay:.18s;">
+        <iframe
+          src="https://maps.google.com/maps?q=47.3384109,28.6228246&z=14&output=embed"
+          width="100%" height="300" style="border:0;display:block;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade" title="Locatia Casa Linistii"></iframe>
+      </div>
 
-  // Staggered scroll reveal — elements in same viewport batch get offset delays
-  const ro=new IntersectionObserver(es=>{
-    // Group elements entering at the same time
-    const entering=es.filter(e=>e.isIntersecting);
-    entering.forEach((e,i)=>{
-      const delay=parseFloat(e.target.style.transitionDelay)||0;
-      // Boost existing stagger, or add subtle one if none set
-      if(!e.target.style.transitionDelay) e.target.style.transitionDelay=(i*0.04)+'s';
-      setTimeout(()=>{e.target.classList.add('in');},0);
-      ro.unobserve(e.target);
+      <!-- Open in Google Maps link -->
+      <a href="https://www.google.com/maps/place/C%C4%83su%C8%9Ba+Lini%C8%99tii/@47.3384109,28.6228246,15z"
+        target="_blank" rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 font-sans text-[12px] text-green-200 hover:text-white transition-colors mb-8 reveal"
+        style="transition-delay:.22s;">
+        <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M8 2C5.24 2 3 4.24 3 7c0 4.25 5 9 5 9s5-4.75 5-9c0-2.76-2.24-5-5-5zm0 6.5A1.5 1.5 0 1 1 8 5a1.5 1.5 0 0 1 0 3z" fill="currentColor"/></svg>
+        Deschide in Google Maps
+      </a>
+
+      <div class="gline mb-8" style="background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);"></div>
+      <div class="flex justify-center gap-6 reveal" style="transition-delay:.26s;">
+        <a href="#" class="font-sans text-[12px] text-green-200 hover:text-white transition-colors">Facebook</a>
+        <a href="#" class="font-sans text-[12px] text-green-200 hover:text-white transition-colors">Instagram</a>
+        <a href="#" class="font-sans text-[12px] text-green-200 hover:text-white transition-colors">WhatsApp</a>
+      </div>
+    </div>
+  </section>
+  <footer style="background:#1a3a08;border-top:1px solid rgba(255,255,255,.06);">
+    <div class="max-w-6xl mx-auto px-6 md:px-12 py-7 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="flex items-center gap-2.5"><svg width="20" height="20" viewBox="0 0 28 28" fill="none">
+          <circle cx="14" cy="14" r="13" stroke="#5A8A2A" stroke-width="1" />
+          <path d="M14 7c0 0-5 4-5 8a5 5 0 0010 0c0-4-5-8-5-8z" fill="#8FAF6B" opacity=".7" />
+        </svg><span class="font-serif text-[13px] text-green-200 tracking-wide">Casa Linistii</span></div>
+      <div class="font-sans text-[11px] text-green-800">2026 Casa Linistii</div><a href="#"
+        class="font-sans text-[11px] text-green-800 hover:text-green-300 transition-colors">Confidentialitate</a>
+    </div>
+  </footer>
+  <script>
+    // Nav + sticky
+    const nav = document.getElementById('nav'), stk = document.getElementById('stk');
+    window.addEventListener('scroll', () => { nav.classList.toggle('sc', scrollY > 50); stk.classList.toggle('on', scrollY > window.innerHeight * .55); }, { passive: true });
+
+    // Mobile menu
+    let mo = false; const mb = document.getElementById('mbtn'), mm = document.getElementById('mmenu');
+    mb.addEventListener('click', () => { mo = !mo; mm.style.opacity = mo ? '1' : '0'; mm.style.pointerEvents = mo ? 'auto' : 'none'; const s = mb.querySelectorAll('span'); if (mo) { s[0].style.transform = 'rotate(45deg) translate(5px,5px)'; s[1].style.opacity = '0'; s[2].style.transform = 'rotate(-45deg) translate(5px,-5px)'; s[2].style.width = '20px'; } else { s[0].style.transform = ''; s[1].style.opacity = '1'; s[2].style.transform = ''; s[2].style.width = ''; } });
+    function cm() { mo = false; mm.style.opacity = '0'; mm.style.pointerEvents = 'none'; const s = mb.querySelectorAll('span'); s[0].style.transform = ''; s[1].style.opacity = '1'; s[2].style.transform = ''; s[2].style.width = ''; }
+
+    // Staggered scroll reveal — elements in same viewport batch get offset delays
+    const ro = new IntersectionObserver(es => {
+      // Group elements entering at the same time
+      const entering = es.filter(e => e.isIntersecting);
+      entering.forEach((e, i) => {
+        const delay = parseFloat(e.target.style.transitionDelay) || 0;
+        // Boost existing stagger, or add subtle one if none set
+        if (!e.target.style.transitionDelay) e.target.style.transitionDelay = (i * 0.04) + 's';
+        setTimeout(() => { e.target.classList.add('in'); }, 0);
+        ro.unobserve(e.target);
+      });
+    }, { threshold: 0.07, rootMargin: '0px 0px -20px 0px' });
+    document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el => ro.observe(el));
+
+    // Image fade-in on load (GPU composited)
+    document.querySelectorAll('.gi img,.rim img,.ac img').forEach(img => {
+      if (img.complete) { img.classList.add('loaded'); }
+      else { img.addEventListener('load', () => img.classList.add('loaded'), { once: true }); }
     });
-  },{threshold:0.07,rootMargin:'0px 0px -20px 0px'});
-  document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>ro.observe(el));
 
-  // Image fade-in on load (GPU composited)
-  document.querySelectorAll('.gi img,.rim img,.ac img').forEach(img=>{
-    if(img.complete){img.classList.add('loaded');}
-    else{img.addEventListener('load',()=>img.classList.add('loaded'),{once:true});}
-  });
+    // Testimonials — smooth dot + slide
+    let tc = 0; const tsl = document.querySelectorAll('.tsl'), tdt = document.querySelectorAll('.tdot');
+    function goT(n) {
+      tsl[tc].classList.remove('on'); tdt[tc].classList.remove('on');
+      tc = n % tsl.length;
+      tsl[tc].classList.add('on'); tdt[tc].classList.add('on');
+    }
+    tdt.forEach(d => d.addEventListener('click', () => goT(+d.dataset.t)));
+    setInterval(() => goT((tc + 1) % tsl.length), 5500);
 
-  // Testimonials — smooth dot + slide
-  let tc=0;const tsl=document.querySelectorAll('.tsl'),tdt=document.querySelectorAll('.tdot');
-  function goT(n){
-    tsl[tc].classList.remove('on');tdt[tc].classList.remove('on');
-    tc=n%tsl.length;
-    tsl[tc].classList.add('on');tdt[tc].classList.add('on');
-  }
-  tdt.forEach(d=>d.addEventListener('click',()=>goT(+d.dataset.t)));
-  setInterval(()=>goT((tc+1)%tsl.length),5500);
+    // Booking form
+    function sub() { const b = document.getElementById('fsub'), ok = document.getElementById('fok'); b.textContent = 'Se trimite...'; b.style.opacity = '.7'; b.style.pointerEvents = 'none'; setTimeout(() => { b.style.display = 'none'; ok.style.animation = 'fqin .4s ease'; ok.classList.remove('hidden'); }, 1200); }
 
-  // Booking form
-  function sub(){const b=document.getElementById('fsub'),ok=document.getElementById('fok');b.textContent='Se trimite...';b.style.opacity='.7';b.style.pointerEvents='none';setTimeout(()=>{b.style.display='none';ok.style.animation='fqin .4s ease';ok.classList.remove('hidden');},1200);}
-
-  // Smooth FAQ icon
-  document.querySelectorAll('.fqi').forEach(d=>{d.addEventListener('toggle',()=>{const icon=d.querySelector('summary');icon.style.color=d.open?'#2D5016':'';});});
-</script>
+    // Smooth FAQ icon
+    document.querySelectorAll('.fqi').forEach(d => { d.addEventListener('toggle', () => { const icon = d.querySelector('summary'); icon.style.color = d.open ? '#2D5016' : ''; }); });
+  </script>
 </body>
+
 </html>
